@@ -1,0 +1,486 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("CV.tex")
+%% TeX ---(XeLaTeX)---> PDF:
+%%
+%% Method 1: Use latexmk for fully automated document generation:
+%%   latexmk -xelatex "CV.tex"
+%%   (add the -pvc switch to automatically recompile on changes)
+%%
+%% Method 2: Use XeLaTeX directly:
+%%   xelatex "CV.tex"
+%%   (run multiple times to resolve cross-references if needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,MMMyyyy,nonstop]{simpleresumecv}
+% Class options:
+% a4paper, letterpaper, draft, nonstop
+% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{David Lavy}
+\newcommand{\CVTitle}{David Lavy's resume for general references}
+%\newcommand{\CVNote}{CV compiled on {\today} for Acme Corporation}
+\newcommand{\CVWebpage}{davidlavy88.github.io}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{bx}{n}%
+      \fontsize{20}{24}%
+      \selectfont}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\title{\TitleFont \CVAuthor}
+
+\begin{subtitle}
+%\href{https://www.google.com/maps/place/1086+Commonwealth+Ave,+Boston,+MA+02215,+USA}
+%{1086 Commonwealth Avenue, Apt 102, Boston 02215, USA}
+%\par
+\href{\CVWebpage}
+{\CVWebpage}
+\,\SubBulletSymbol\,
+\href{mailto:david.lavy88@gmail.com}
+{david.lavy88@gmail.com}
+\par
++1\,(617)\,820-9523
+\,\SubBulletSymbol\,
+\href{https://github.com/davidlavy88}
+{github.com/davidlavy88}
+
+\end{subtitle}
+
+\begin{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% REASEARCH EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Research Experience}
+{Research Experience}
+{PDF:ResearchExperience}
+
+\href{http://www.bu.edu/vip/files/pubs/reports/DLTM15-06buece.pdf}
+{\textbf{Autonomous Navigation with NAO}}
+\hfill
+Boston University, \textit{2015}
+
+\GapNoBreak
+\BulletItem
+Designed a navigation system using the visual information from the 2 cameras mounted on the NAO humanoid robot, as well as its sonar sensors, that seeks to find a ball, navigate to it, and kick it.
+\GapNoBreak
+\textit{Keywords}: Python, OpenCV, NAOqi, Linux
+
+\BigGap
+\href{http://www.bu.edu/vip/files/pubs/reports/DLDP15-03buece.pdf}
+{\textbf{Virtual Shape Recognition using Leap Motion}}
+\hfill
+Boston University, \textit{2015}
+
+\GapNoBreak
+\BulletItem
+Designed a system to recognize hand drawing gestures of numerical letters in the air using a gesture-capturing sensor and  output the corresponding values.
+\GapNoBreak
+\textit{Keywords}: C++, MATLAB, OpenCV, Machine Learning, Linux, Leap Motion SDK
+
+\BigGap
+\href{https://docs.google.com/presentation/d/1328Qvm9VlAZadwlNoU3n5m1REY36m_hGcakSYlxW2vM/edit?ts=565d2938#slide=id.p}
+{\textbf{Facial identification using a multilayer perceptron}}
+\hfill
+Boston University, \textit{2015}
+
+\GapNoBreak
+\BulletItem
+Implemented and trained a neural network which classify people based on faces. The system can take new persons and new faces and extend its information to learn to recognize new people.
+\GapNoBreak
+\textit{Keywords}: Python, OpenCV, Machine Learning, Linux, PyBrain
+
+\BigGap
+\textbf{Modelling and Control of an UAV using SLAM}
+\hfill
+Univ. Nacional de Ingenieria, \textit{2011}
+
+\GapNoBreak
+\BulletItem
+Modelled a quad-rotor using linear control. Developed an artificial vision system with a mounted Kinect and used a navigation and mapping technique to make the vehicle autonomous.
+\GapNoBreak
+\textit{Keywords}: Python, C++, MATLAB, OpenCV, ROS, Linux
+
+\BigGap
+\href{https://davidlavy.files.wordpress.com/2013/12/paper-mt-517.pdf}
+{\textbf{Design and modelling of a 4DOF Robotic Arm}}
+\hfill
+Univ. Nacional de Ingenieria, \textit{2010}
+
+\GapNoBreak
+\BulletItem
+Simulation of a 4DOF KUKA Robotic Arm in Simulink (MATLAB) using linear, nonlinear and fuzzy control. The robot was designed using SolidWorks and then exported to Simulink.
+\GapNoBreak
+\textit{Keywords}: MATLAB, Simulink, SolidWorks, Artificial Intelligence
+
+%\begin{detail}
+%\SubBulletItem
+%Project:
+%
+%\end{detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Skills}
+{Skills}
+{PDF:Skills}
+
+\GapNoBreak
+\BulletItem
+\textit{Programming Languages}: C/C++, Python, MATLAB/Octave/Simulink, C\#, Java, HTML/CSS
+\BulletItem
+\textit{Robotics Libraries}: OpenCV, PCL, CUDA, OpenGL
+\BulletItem
+\textit{Robotics Frameworks}: ROS, Gazebo, MORSE, NAOqi
+\BulletItem
+\textit{Source control}: Git
+\BulletItem
+\textit{IDE}: QtCreator, Eclipse, Codeblocks, Visual Studio
+\BulletItem
+\textit{Operating Systems}: Linux, Embedded Linux, Windows
+\BulletItem
+\textit{Writing}: {\TeX}, {\LaTeX}
+\BulletItem
+\textit{CAD Tools}: AutoCAD, SolidWorks
+\BulletItem
+\textit{Office}: Microsoft Word, PowerPoint, and Excel. SalesForce, SAP By Design
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% WORKING EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Working Experience}
+{Working Experience}
+{PDF:WorkingExperience}
+
+\textbf{Robotics Repair Engineer for the Americas}
+\hfill
+\DatestampYMD{2013}{04}{01} --
+Present 
+\begin{detail}
+\normalsize{ \href{https://www.aldebaran.com/en}
+{\textit{Aldebaran Robotics/Softbank Group}},
+Boston, Massachusetts, USA }
+\end{detail}
+
+\GapNoBreak
+\BulletItem
+Repairs NAO and Pepper humanoid robots for all North and South America. 
+\BulletItem
+Achieved fastest repair time worldwide since January 2015 for our Boston office, increasing customer satisfaction and overall KPI.
+\BulletItem
+Teaches technical training sessions for distributors and customers.
+\BulletItem
+Provides software and hardware assistance at trade shows and special events, in the USA, Mexico, France and Brasil, including the international competition Robocup.
+\BulletItem
+Trained at the headquarters in Paris and the Tokyo office about hardware and software repair for NAO and Pepper (Aldebaran's second humanoid robot).
+
+\BigGap
+\textbf{Cafeteria Manager}
+\hfill
+Winter 2010 --
+Winter 2011 --
+Winter 2013
+\begin{detail}
+\normalsize{ \href{http://www.patspeak.com/}
+{\textit{Pats Peak Ski Area}},
+Henniker, New Hampshire, USA }
+\end{detail}
+
+\GapNoBreak
+\BulletItem
+Managed and trained a staff of 30 individuals in the cafeteria at a busy ski area.
+\BulletItem
+Ensured that operations ran smoothly and efficiently.
+
+\BigGap
+\textbf{Automation Engineer}
+\hfill
+\DatestampYMD{2012}{03}{01} --
+\DatestampYMD{2012}{08}{30}
+\begin{detail}
+\normalsize{ \href{http://www.alicorp.com.pe/alicorp/index.html}
+{\textit{Alicorp}},
+Callao, Lima, Peru }
+\end{detail}
+
+\GapNoBreak
+\BulletItem
+Supervised the electric, electronic, and automatized engineering operations within two production factories.
+\BulletItem
+Managed the engineering and automation design of one of the mills. Facilitated communication and transport between factories, optimizing daily operations.
+
+\BigGap
+\textbf{Intern}
+\hfill
+\DatestampYMD{2011}{05}{01} --
+\DatestampYMD{2011}{10}{31}
+\begin{detail}
+\normalsize{ \textit{Mafersa},
+Pueblo Libre, Lima, Peru }
+\end{detail}
+
+\GapNoBreak
+\BulletItem
+Team member responsible for the design of electrical installations within residential and commercial buildings.
+\BulletItem
+Greatly improved knowledge of electrical design in AutoCAD and programming in Excel Macros.
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\section
+{Education}
+{Education}
+{PDF:Education}
+
+\href{http://www.bu.edu/}
+{\textbf{Boston University}},
+Boston, Massachusetts, USA
+
+\GapNoBreak
+\BulletItem
+Master of Science (M.Sc.) in
+\href{http://www.bu.edu/ece/}
+{Electrical Engineering}
+\hfill
+\DatestampYMD{2014}{09}{01} --
+\DatestampYMD{2016}{05}{15}
+\begin{detail}
+\SubBulletItem
+Cumulative GPA: 3.9 / 4.0
+\end{detail}
+\BulletItem
+Graduate Coursework: Digital Image/Video Processing, DSP, Stochastic Processes, Machine Learning, Embedded Systems, Linux Kernels, Speech Processing
+
+\BigGap
+\href{http://www.uni.edu.pe/}
+{\textbf{Universidad Nacional de Ingenieria}},
+Lima, Lima, Peru
+
+\GapNoBreak
+\BulletItem
+Bachelor of Science (B.S.) in
+\href{http://www.fim.uni.edu.pe/}
+{Mechatronics Engineering}
+\hfill
+\DatestampYMD{2006}{09}{1} --
+\DatestampYMD{2011}{08}{31}
+\begin{detail}
+\SubBulletItem
+Ranked 10/46 in graduating class.
+\SubBulletItem
+Cumulative GPA: 3.75 / 4.00
+\end{detail}
+\BulletItem
+Undergraduate Coursework: Robotics Control, Artificial Intelligence, Computer Vision, HMI, Programming Languages, Algorithms, Videogame Programming
+
+%%%%%%%%%%%%%%%%%%%%%
+%% CERTIFICATES %%
+%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Certificates}
+{Certificates}
+{PDF:Certificates}
+
+\GapNoBreak
+\BulletItem
+\href{https://davidlavy.files.wordpress.com/2013/12/robotic-car-certificate.pdf}
+{Programming a Robotics Car}
+\hfill
+\textbf{Udacity}
+\GapNoBreak
+\BulletItem
+\href{https://davidlavy.files.wordpress.com/2013/12/artificial-intelligence-certificate.pdf}
+{Introduction to Artificial Intelligence}
+\hfill
+\textbf{Udacity}
+\GapNoBreak
+\BulletItem
+\href{https://davidlavy.files.wordpress.com/2013/12/machine-learning-certificate.pdf}
+{Machine Learning}
+\hfill
+\textbf{Coursera}
+\GapNoBreak
+\BulletItem
+\href{https://davidlavy.files.wordpress.com/2013/12/nn-for-ml-certificate.pdf}
+{Neural Networks for Machine Learning}
+\hfill
+\textbf{Coursera}
+\GapNoBreak
+\BulletItem
+\href{https://davidlavy.files.wordpress.com/2013/12/writing-in-sciences-certificate.pdf}
+{Writing in the Sciences}
+\hfill
+\textbf{Coursera}
+\GapNoBreak
+\BulletItem
+\href{https://davidlavy.files.wordpress.com/2013/12/cs184-certificate.pdf}
+{Foundations of Computer Graphics}
+\hfill
+\textbf{edX}
+
+%%%%%%%%%%%%%%%%%%%
+%% Honors Awards %%
+%%%%%%%%%%%%%%%%%%%
+
+\section
+{Honors \newline
+\& Awards}
+{Honors and Awards}
+{PDF:HonorsandAwards}
+
+\GapNoBreak
+\BulletItem
+Placed $2^{nd}$ in CONEIMERA 2011 (Lima, Peru)
+\SubBulletItem
+Project Title: \textit{Linear Modeling and Control of an UAV using Autonomous Navigation}
+\GapNoBreak
+\BulletItem
+Travel grand to attend CONEIMERA 2011 by Universidad Nacional de Ingenieria
+\GapNoBreak
+\BulletItem
+Placed $2^{nd}$ in CONEIMERA 2010 (Lima, Peru)
+\SubBulletItem
+Project Title: \textit{Security Systems for Access Control Using RFID Technology}
+\GapNoBreak
+\BulletItem
+Travel grand to attend CONEIMERA 2010 by Universidad Nacional de Ingenieria
+\GapNoBreak
+\BulletItem
+Certificate of recognition for highest academic performance in the Mechatronic Engineering Department at Universidad Nacional de Ingenieria, 2008
+
+%%%%%%%%%%%%%%%
+%% LANGUAGES %%
+%%%%%%%%%%%%%%%
+
+\section
+{Languages}
+{Languages}
+{PDF:Languages}
+
+\GapNoBreak
+\BulletItem
+English: Fluent (speaking, reading, writing)
+\GapNoBreak
+\BulletItem
+Spanish: Native Language
+\GapNoBreak
+\BulletItem
+French: Basic (speaking, reading, writing)
+\GapNoBreak
+\BulletItem
+Japanese: Basic (speaking, reading, writing)
+
+%%%%%%%%%%%%%%%
+%% INTERESTS %%
+%%%%%%%%%%%%%%%
+
+%\section
+%{Interests}
+%{Interests}
+%{PDF:Interests}
+%
+%Digital photography,
+%typography,
+%swimming.
+%
+%%%%%%%%%%%%%%%%%
+%%% REFERENCES %%
+%%%%%%%%%%%%%%%%%
+%
+%\section
+%{References}
+%{References}
+%{PDF:References}
+%
+%\BulletItem
+%\textbf{Professor Jonathan Public}
+%\newline
+%Professor of Geology and Mechanical Engineering
+%\newline
+%First American University
+%\begin{detail}
+%\SubItem
+%1000 First Avenue, Springfield, Massachusetts 22222, USA
+%\newline
+%\href{mailto:jonathanpublic@example.com}
+%{jonathanpublic@example.com}
+%\,\SubBulletSymbol\,
+%+1\,(555)\,222-2222
+%\end{detail}
+%
+%\Gap
+%\BulletItem
+%\textbf{Dr Alice Bob Carol}
+%\newline
+%Director, Research \& Development
+%\newline
+%Alpha Engineering Firm
+%\begin{detail}
+%\SubItem
+%20 North Street, Oakland, Ohio 33333, USA
+%\newline
+%\href{mailto:alicebobcarol@example.com}
+%{alicebobcarol@example.com}
+%\,\SubBulletSymbol\,
+%+1\,(555)\,333-3333
+%\end{detail}
+
+\end{body}
+
+\end{document}
